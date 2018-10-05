@@ -17,6 +17,9 @@ io.on('connection',(socket)=>{
       //reffering to all the sockets that are connected in different browsers
         io.sockets.emit('chat',data);  
     });
+    socket.on('typing',(data)=>{
+        socket.broadcast.emit('typing',data);
+    });
     //Whenever someone disconnects this piece of code executed
     socket.on('disconnect', function () {
         console.log('User disconnected!',socket.id);
