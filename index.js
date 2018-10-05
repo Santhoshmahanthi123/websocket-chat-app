@@ -11,10 +11,15 @@ const io = socket(server);
 //When every client connects to socket this function gets executed
 io.on('connection',(socket)=>{
     //socket.id gives the unique id every time new user connects to the socket
-    console.log("A user connected!",socket.id);
+    console.log("New user connected!",socket.id);
+   //socket listening to the data when it is sent by the user
+    socket.on('chat',(data)=>{
+      //reffering to all the sockets that are connected in different browsers
+        io.sockets.emit('chat',data);  
+    });
     //Whenever someone disconnects this piece of code executed
     socket.on('disconnect', function () {
-        console.log('A user disconnected!',socket.id);
+        console.log('User disconnected!',socket.id);
       });
     
 });
