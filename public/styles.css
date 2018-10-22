@@ -15,6 +15,9 @@ h2{
     box-shadow: 1px 3px 5px rgba(0,0,0,0.05);
     border-radius: 2px;
 }
+#h1{
+color: maroon;
+}
 
 #chat-window{
     height: 400px;
@@ -30,13 +33,13 @@ h2{
 }
 
 #feedback p{
-    color: #aaa;
+    color: lightblue;
     padding: 14px 0px;
     margin: 0 20px;
 }
 
 #output strong{
-    color: #575ed8;
+    color: blue;
 }
 
 label{
@@ -59,7 +62,7 @@ input{
 }
 
 button{
-    background: #575ed8;
+    background: maroon;
     color: #fff;
     font-size: 18px;
     border: 0;
