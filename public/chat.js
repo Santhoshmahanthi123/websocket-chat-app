@@ -1,5 +1,7 @@
+require('dotenv').config();
 //Make Connection
-const socket = io.connect("http://localhost:3030");
+const port = process.env.PORT | 3000;
+const socket = io.connect(port);
 //Query DOM
 const message = document.getElementById('message');
       handle = document.getElementById('handle'),

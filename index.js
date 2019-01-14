@@ -1,9 +1,11 @@
+require('dotenv').config();
 const express = require('express');
 const socket = require('socket.io');
+const port = process.env.PORT | 8080;
 //set up express app
 const app = express();
-var server = app.listen(3030,()=>
-console.log("listening to server on port:3030"));
+var server = app.listen(port,()=>
+console.log("listening to server on port:8080"));
 //static files
 app.use(express.static('public'));
  //Setting up the socket to the back end express server
