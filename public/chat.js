@@ -1,7 +1,5 @@
-require('dotenv').config();
 //Make Connection
-const port = process.env.PORT;
-const socket = io.connect(port);
+const socket = io.connect("https://webchat-app.herokuapp.com/");
 //Query DOM
 const message = document.getElementById('message');
       handle = document.getElementById('handle'),
