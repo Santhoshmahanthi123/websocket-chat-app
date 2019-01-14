@@ -1,6 +1,6 @@
 require('dotenv').config();
 //Make Connection
-const port = process.env.PORT | 8080;
+const port = process.env.PORT;
 const socket = io.connect(port);
 //Query DOM
 const message = document.getElementById('message');
